@@ -1,0 +1,38 @@
+main label {
+  background-color: transparent;
+  border-bottom: 2px black solid;
+}
+main form {
+  width: 100%;
+}
+
+.new-tweet {
+  width: 100%;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  border: 0;
+}
+
+.new-tweet textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 4px#545149 solid;
+  resize: none;
+  width: 100%;
+  
+}
+
+.new-tweet .tweet-button {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  margin-top: 2px; 
+  font-family: 'Bungee', sans-serif;
+}
+::-webkit-input-placeholder {
+  font-weight: 600;
+}
