@@ -2,12 +2,34 @@ nav {
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
+  width: 100%;
   padding-left: 1.5em;
   padding-right: 1.5em;
   display: flex;
   justify-content: space-between;
 }
-
 nav span {
   font-family: 'Bungee', sans-serif;
+  display: flex;
+  align-items: flex-end;
+  font-size: 2em;
+  margin-bottom: 0.3em;
 }
+
+.new-tweet {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.new-tweet p {
+  margin: 0;
+}
+
+.new-tweet i {
+  color: red;
+  margin-bottom: 0.75em;
+}
+
+
