@@ -1,0 +1,21 @@
+.profile {
+  height: 400px;
+  width: 100%;
+  background-color: goldenrod;
+  background-image: url("/images/groovepaper.png");
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.user {
+  margin-top: 0.01em;
+}
+
+.name {
+  margin-top: 0;
+}
