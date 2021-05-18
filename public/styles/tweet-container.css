@@ -1,0 +1,62 @@
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+article {
+  border: 4px black solid;
+  margin-top: 1.2em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+article:hover {
+  box-shadow: 5px 10px powderblue;
+}
+article header {
+  background-color: #f4f1ec;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+article .tweet-content p{
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+article .handle {
+  color: powderblue;
+  font-weight: bold;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+  padding: 16px;
+  border-top: inherit;
+}
+article .icons {
+  display: flex;
+  color: #4056A1;
+}
+article .flag:hover, .retweet:hover, .like:hover {
+  color: gold;
+}
+
+article .flag {
+  padding-right: 6px;
+}
+article .retweet {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+article .like {
+  padding-left: 6px;
+}
+article .date {
+  font-size: 0.6em;
+}
