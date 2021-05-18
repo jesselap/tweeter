@@ -1,3 +1,7 @@
+/* * {
+  border: 2px black solid;
+} */
+
 main label {
   background-color: transparent;
   border-bottom: 2px black solid;
@@ -8,6 +12,7 @@ main form {
 
 .new-tweet {
   width: 100%;
+  margin-top: 2em;
 }
 
 .new-tweet button {
@@ -19,10 +24,11 @@ main form {
 
 .new-tweet textarea {
   background-color: transparent;
-  border: 0;
+  border: none;
   border-bottom: 4px#545149 solid;
   resize: none;
   width: 100%;
+  outline: none;
   
 }
 
