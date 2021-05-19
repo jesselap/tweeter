@@ -3,36 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1621209880373
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1621296280373
-  }
-];
 
-const renderTweet = function(data) {
-  for (let tweet of data) {
-    $('#tweet-container').append(createTweetElement(tweet));
-  }
-};
+
+
 const createTweetElement = (tweetData) => {
   let $tweet = $(`<article>
   <header>
@@ -56,8 +29,39 @@ const createTweetElement = (tweetData) => {
   </article>`);
   return $tweet;
 };
+
+const renderTweet = function(data) {
+    for (let tweet of data) {
+      $('#tweet-container').prepend(createTweetElement(tweet));
+    }
+  };
 $(document).ready(() => {
-  console.log(data[0])
-  renderTweet(data); 
-  console.log("hello")
+
+  
+  
+  $("#tweet-post").submit(function(event) {
+    event.preventDefault();
+    const tweet = $(this).serialize();
+    if (!event.target[0].value.length) {
+      alert("Say something!")
+    } else if (event.target[0].value.length > 140) {
+      alert("Can you condense that a little bit?")
+    } else {
+      $.post("/tweets", tweet).then((tweet)=>{
+        loadTweets();
+        $("#tweet-text").val('');
+        $(".counter").val(140);
+      })
+    }  
+  })
+
+  const loadTweets = function() {
+    $.ajax("/tweets", {method: "GET"})
+    .then(function (tweets) {
+      renderTweet(tweets);
+    })
+  };
+
+  loadTweets()
+
 })
