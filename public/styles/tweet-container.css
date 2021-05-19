@@ -22,12 +22,13 @@ article header {
   justify-content: space-between;
   padding: 16px;
 }
-
-article .tweet-content p{
+article .tweet-content p {
   text-align: left;
+  width: inherit;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 5px;
+  overflow-wrap: break-word;
 }
 article .handle {
   color: powderblue;

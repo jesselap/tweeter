@@ -61,9 +61,8 @@ const renderTweet = function(data) {
     }
   };
 
-$(document).ready(() => {
 
-  
+$(document).ready(() => {
   
   $("#tweet-post").submit(function(event) {
     event.preventDefault();
