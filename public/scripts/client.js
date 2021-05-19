@@ -10,6 +10,8 @@ const escape = function (str) {
 };
 
 
+
+
 const createTweetElement = (tweetData) => {
   let $tweet = $(`<article>
   <header>
@@ -34,11 +36,31 @@ const createTweetElement = (tweetData) => {
   return $tweet;
 };
 
+
+const errorMessage = (errorString) => {
+  let message = $(`<p>Error: ${errorString}</p>`)
+  return message;
+};
+const renderError = function(error) {
+  if ($("#error").is(":hidden")) {
+    $('#error').empty();
+    $('#error').append(errorMessage(error));
+    $("#error").slideDown("slow");
+  
+  } else if ($("#error").is(":visible")) {
+    $("#error").slideUp("slow");
+    $('#error').empty();
+    $('#error').append(errorMessage(error));
+    $("#error").slideDown("slow");
+  }
+};
+
 const renderTweet = function(data) {
     for (let tweet of data) {
       $('#tweet-container').prepend(createTweetElement(tweet));
     }
   };
+
 $(document).ready(() => {
 
   
@@ -47,15 +69,25 @@ $(document).ready(() => {
     event.preventDefault();
     const tweet = $(this).serialize();
     if (!event.target[0].value.length) {
-      alert("Say something!")
+      renderError('Say something!');
     } else if (event.target[0].value.length > 140) {
-      alert("Can you condense that a little bit?")
+      renderError('Can you condense that a bit?');
     } else {
-      $.post("/tweets", tweet).then((tweet)=>{
+      if ($("#error").is(":visible")) {
+        $("#error").slideUp("slow");
+        $.post("/tweets", tweet).then((tweet)=>{
+          loadTweets();
+          $("#tweet-text").val('');
+          $(".counter").val(140);
+        })
+      } else {
+        $.post("/tweets", tweet).then((tweet)=>{
         loadTweets();
         $("#tweet-text").val('');
         $(".counter").val(140);
       })
+      }
+      
     }  
   })
 

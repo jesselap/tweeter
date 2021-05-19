@@ -12,7 +12,9 @@ main form {
 
 .new-tweet {
   width: 100%;
-  margin-top: 2em;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .new-tweet button {
@@ -40,4 +42,12 @@ main form {
 }
 ::-webkit-input-placeholder {
   font-weight: 600;
+}
+#error {
+  background-color: transparent;
+  width: 50%;
+  margin-bottom: 1em;
+  display: none;
+  border: 4px red solid;
+  color: red;
 }
