@@ -55,12 +55,16 @@ const renderError = function(error) {
     // Fill error html with appropriate message
     $('#error').append(errorMessage(error));
     $("#error").slideDown("slow");
-    setTimeout(function(){ $("#error").slideUp("slow"); }, 3000)
+    setTimeout(function() {
+      $("#error").slideUp("slow");
+    }, 3000);
   
   } else if ($("#error").is(":visible")) {
     $('#error').empty();
     $('#error').append(errorMessage(error));
-    setTimeout(function(){ $("#error").slideUp("slow"); }, 3000)
+    setTimeout(function() {
+      $("#error").slideUp("slow");
+    }, 3000);
   }
 };
 
@@ -73,9 +77,12 @@ const errorMessage = (errorString) => {
 
 $(document).ready(() => {
   // Button to reveal new tweet form
-  $(".button").click(function(event) {
+  $(".nav-new-tweet-text").click(function(event) {
     $(".new-tweet").slideToggle("slow");
+    $("textarea").focus();
   });
+
+  
 
   // Tweet creation
   $("#tweet-post").submit(function(event) {
