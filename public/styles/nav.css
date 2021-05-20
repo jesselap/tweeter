@@ -36,6 +36,13 @@ nav span {
 .nav-new-tweet i {
   color: red;
   margin-bottom: 0.75em;
+  animation: bounce 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0% {transform: translateY(-5px)}
+  50% {transform: translateY(10px)}
+  100% {transform: translateY(-5px)}
 }
 
 .nav-new-tweet-text {
