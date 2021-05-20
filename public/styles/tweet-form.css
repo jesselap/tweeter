@@ -10,11 +10,13 @@ main form {
   width: 100%;
 }
 
+
 .new-tweet {
   width: 100%;
-  margin-top: 1em;
-  display: flex;
-  align-items: center;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+  display: none;
+  flex-direction: column;
 }
 
 .new-tweet button {
@@ -43,6 +45,12 @@ main form {
 ::-webkit-input-placeholder {
   font-weight: 600;
 }
+
+.error-container {
+  display: flex;
+  justify-content: center;
+}
+
 #error {
   background-color: transparent;
   width: 50%;
@@ -50,4 +58,5 @@ main form {
   display: none;
   border: 4px red solid;
   color: red;
+  align-self: center
 }

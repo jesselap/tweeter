@@ -24,26 +24,30 @@ nav span {
   margin-bottom: 0.3em;
 }
 
-.new-tweet {
+.nav-new-tweet {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.new-tweet p {
+.nav-new-tweet p {
   margin: 0;
 }
 
-.new-tweet i {
+.nav-new-tweet i {
   color: red;
   margin-bottom: 0.75em;
 }
 
-.new-tweet-text {
+.nav-new-tweet-text {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
+.button {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+}

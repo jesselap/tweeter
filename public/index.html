@@ -32,9 +32,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <div class="new-tweet">
-        <div class="new-tweet-text">
-          <p><b>Write</b> a new tweet</p>
+      <div class="nav-new-tweet">
+        <div class="nav-new-tweet-text">
+          <button class= "button" type="submit"><b>Write</b> a new tweet</button>
           <i class="fas fa-angle-double-down"></i>
         </div>
       </div>
@@ -42,11 +42,11 @@
     <header class="profile">
       <div class="user">
         <div>
-          <img class="user avatar" src="/images/profile-hex.png"> 
+          <img class="user-avatar" src="/images/profile-hex.png"> 
       </div>
       <br>
         <div>
-            <h2>Jesse LaPointe</h2>
+            <h2 class="user-name">Jesse LaPointe</h2>
         </div>
       </div>
   </header>
@@ -55,7 +55,9 @@
     <!-- Page-specific (main) content here -->
     <main>
     <section class="new-tweet">
-      <span id="error"></span>
+      <div class="error-container">
+        <span id="error"></span>
+      </div>
       <form id="tweet-post" action="/tweets" method="POST">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="tweet-button">
