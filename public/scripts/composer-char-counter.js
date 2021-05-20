@@ -7,9 +7,9 @@ $(document).ready(() => {
     
     // CSS change if char count is over limit
     if (counter.value < 0) {
-        $(counter).css("color", "red");
-      } else {
-        $(counter).css("color", "#545149");
+      $(counter).css("color", "red");
+    } else {
+      $(counter).css("color", "#545149");
     }
   });
 });
