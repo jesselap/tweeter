@@ -33,12 +33,14 @@
     <nav>
       <span>tweeter</span>
       <div class="nav-new-tweet">
+        <!-- Display New Tweet Form -->
         <div class="nav-new-tweet-text">
           <button class= "button" type="submit"><b>Write</b> a new tweet</button>
           <i class="fas fa-angle-double-down"></i>
         </div>
       </div>
     </nav>
+    <!-- Current User -->
     <header class="profile">
       <div class="user">
         <div>
@@ -55,9 +57,11 @@
     <!-- Page-specific (main) content here -->
     <main>
     <section class="new-tweet">
+      <!-- Hidden Error message -->
       <div class="error-container">
         <span id="error"></span>
       </div>
+      <!-- New Tweet Form -->
       <form id="tweet-post" action="/tweets" method="POST">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="tweet-button">
@@ -66,6 +70,7 @@
         </div>
       </form>
     </section>
+    <!-- Existing Tweets (Prepended from Database) -->
     <section id="tweet-container"></section>
   </main>  
   </body>
