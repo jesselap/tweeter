@@ -28,15 +28,18 @@ main {
   background-color: #f4f1ec;
   justify-content: center;
   margin: auto;
-  
 }
 
 main p {
   text-align: center;
-
 }
 
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+/* Laptop screen or larger */
+@media screen and (min-width: 1024px) {
+  /* content layout shift */
+  body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+ }

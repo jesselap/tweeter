@@ -1,15 +1,11 @@
-/* * {
-  border: 2px black solid;
-} */
-
 main label {
   background-color: transparent;
   border-bottom: 2px black solid;
 }
+
 main form {
   width: 100%;
 }
-
 
 .new-tweet {
   width: 100%;
@@ -24,6 +20,10 @@ main form {
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
   border: 0;
+}
+
+.new-tweet button:hover {
+  box-shadow: 2.5px 5px powderblue;
 }
 
 .new-tweet textarea {
@@ -59,4 +59,15 @@ main form {
   border: 4px red solid;
   color: red;
   align-self: center
+}
+
+/* Laptop screen or larger */
+@media screen and (min-width: 1024px) {
+  main {
+    margin-right: 1em;
+    margin-top: 120px;
+  } 
+  #tweet-container {
+    max-width: 800px;
+  }
 }

@@ -1,10 +1,7 @@
-/* * {
-  border: 2px black solid;
-} */
-
 nav {
   height: 120px;
-  background-color: #4056A1;
+  background-color: goldenrod;
+  background-image: url("/images/groovepaper.png");
   color: #FFFFFF;
   width: 100%;
   padding-left: 1.5em;
@@ -16,6 +13,7 @@ nav {
   position: fixed;
   z-index: 1;
 }
+
 nav span {
   font-family: 'Bungee', sans-serif;
   display: flex;
@@ -50,4 +48,21 @@ nav span {
   background-color: transparent;
   color: #FFFFFF;
   border: none;
+}
+
+/* Table screen */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    /* nav bar color change */
+    background-color: goldenrod;
+    background-image: url("/images/groovepaper.png");
+  } 
+}
+/* Laptop screen or larger */
+@media screen and (min-width: 1024px) {
+  /* nav bar color change */
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
 }
