@@ -45,7 +45,7 @@
       <div class="user">
         <div>
           <img class="user-avatar" src="/images/profile-hex.png"> 
-      </div>
+        </div>
       <br>
         <div>
             <h2 class="user-name">Terry Tweetson</h2>
@@ -56,22 +56,22 @@
 
     <!-- Page-specific (main) content here -->
     <main>
-    <section class="new-tweet">
-      <!-- Hidden Error message -->
-      <div class="error-container">
-        <span id="error"></span>
-      </div>
-      <!-- New Tweet Form -->
-      <form id="tweet-post" action="/tweets" method="POST">
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div class="tweet-button">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+      <section class="new-tweet">
+        <!-- Hidden Error message -->
+        <div class="error-container">
+          <span id="error"></span>
         </div>
-      </form>
-    </section>
-    <!-- Existing Tweets (Prepended from Database) -->
-    <section id="tweet-container"></section>
-  </main>  
+        <!-- New Tweet Form -->
+        <form id="tweet-post" action="/tweets" method="POST">
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div class="tweet-button">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <!-- Existing Tweets (Prepended from Database) -->
+      <section id="tweet-container"></section>
+    </main>  
   </body>
 </html>
