@@ -32,6 +32,7 @@ const createTweetElement = (tweetData) => {
 
 // Attaches tweet html to tweet data from Database
 const renderTweet = function(data) {
+  $('#tweet-container').empty();
   for (let tweet of data) {
     // Attaches tweets to page in chronological order
     $('#tweet-container').prepend(createTweetElement(tweet));
